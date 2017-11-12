@@ -1,4 +1,3 @@
-import { AceModule } from "@wowts/tsaddon";
 import { Constructor, Library } from "@wowts/tslib";
 
 export interface AceTimer {
