@@ -15,7 +15,7 @@
     "@wowts/tsaddon": "^1.0.0"
   },
   "devDependencies": {
-    "typescript": "^2.5.3"
+    "typescript": "^3.0.1"
   },
   "repository": {
     "type": "git",
