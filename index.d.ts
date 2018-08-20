@@ -2,7 +2,7 @@ import { Library } from "@wowts/tslib";
 export interface AceTimer {
     ScheduleTimer(method: string, interval: number): Timer;
     ScheduleRepeatingTimer(method: string, interval: number): Timer;
-    CancelTimer(handle: number): void;
+    CancelTimer(handle: Timer): void;
 }
 export interface Timer {
     delay: number;

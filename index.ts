@@ -3,7 +3,7 @@ import { Constructor, Library } from "@wowts/tslib";
 export interface AceTimer {
     ScheduleTimer(method: string, interval: number): Timer;
     ScheduleRepeatingTimer(method: string, interval: number): Timer;
-    CancelTimer(handle: number): void;
+    CancelTimer(handle: Timer): void;
 }
 
 export interface Timer {
@@ -17,7 +17,7 @@ const lib: Library<AceTimer> = {
         return class extends Base {
             public ScheduleTimer(method: string, interval: number): Timer { return { delay: interval, looping: false, ends: interval }; }
             public ScheduleRepeatingTimer(method: string, interval: number): Timer { return { delay: interval, looping: true, ends: interval }; }
-            public CancelTimer(handle: number): void {}
+            public CancelTimer(handle: Timer): void {}
         };
     },
 };
