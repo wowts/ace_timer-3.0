@@ -1,7 +1,8 @@
 import { Library } from "@wowts/tslib";
+export declare type Callback = (timer: Timer) => void;
 export interface AceTimer {
-    ScheduleTimer(method: string, interval: number): Timer;
-    ScheduleRepeatingTimer(method: string, interval: number): Timer;
+    ScheduleTimer(method: string | Callback, interval: number): Timer;
+    ScheduleRepeatingTimer(method: string | Callback, interval: number): Timer;
     CancelTimer(handle: Timer): void;
 }
 export interface Timer {
